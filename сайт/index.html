@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир Блинов — Рецепты и Калькулятор</title>
+    <!-- Подключение внешних стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#home" class="logo">Мир<span>Блинов</span></a>
+            <div class="burger-menu" id="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Главная</a>
+                <a href="#calculator" class="nav-link">Калькулятор</a>
+                <a href="#reviews" class="nav-link">Отзывы</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="hero-content">
+            <h1>Идеальные блины<br>каждый раз</h1>
+            <p>Выбирайте проверенные рецепты от классических до диетических и рассчитывайте пропорции ингредиентов под любое количество гостей за одну секунду.</p>
+            <a href="#calculator" class="btn">Открыть калькулятор</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://unsplash.com" alt="Аппетитные блины">
+        </div>
+    </section>
+
+    <section id="calculator">
+        <h2 class="section-title">Калькулятор рецептов</h2>
+        <div class="calculator-wrapper">
+            
+            <div class="calc-controls">
+                <div class="recipe-selector">
+                    <label for="recipeSelect">Выберите тип блинов:</label>
+
+                    <select id="recipeSelect">
+                        <option value="classic">Классические на молоке</option>
+                        <option value="kefir">Ажурные на кефире</option>
+                        <option value="diet">Диетические (овсяные)</option>
+                        <option value="chocolate">Шоколадные с какао</option>
+                        <option value="pancakes">Американские панкейки (пышные)</option>
+                        <option value="yeast">Старорусские на дрожжах</option>
+                    </select>
+
+
+                </div>
+
+                <div class="portions-input">
+                    <label for="portionsCount">Количество порций (блинов):</label>
+                    <input type="number" id="portionsCount" value="10" min="1" max="100">
+                </div>
+            </div>
+
+            <div class="calc-display">
+                <h3 id="recipeTitle">Классические на молоке</h3>
+                <div class="energy-info">
+                    <div>Калории: <span id="totalCalories">0</span> ккал</div>
+                    <div>БЖУ: <span id="bjuRatio">0/0/0</span></div>
+                </div>
+                <ul class="ingredients-list" id="ingredientsList">
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="reviews">
+        <h2 class="section-title">Отзывы кулинаров</h2>
+        <div class="reviews-container">
+            <div class="review-card">
+                <div class="review-header">
+                    <span class="reviewer-name">Мария Иванова</span>
+                    <span class="review-rating">★★★★★</span>
+                </div>
+                <p class="review-text">«Блины на кефире по вашему рецепту получились просто волшебными! Действительно ажурные, с кучей дырочек. Калькулятор очень выручил, когда приехали гости».</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <span class="reviewer-name">Александр П.</span>
+                    <span class="review-rating">★★★★☆</span>
+                </div>
+                <p class="review-text">«Попробовал диетический вариант. Для овсяных блинов — вкус отличный. Приложение удобное, всё лаконично и понятно с телефона».</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Остались вопросы?</h2>
+        <div class="contact-form">
+            <div class="form-success-msg" id="successMessage">Сообщение успешно отправлено! Мы ответим вам в ближайшее время.</div>
+            <form id="feedbackForm" novalidate>
+                <div class="form-group" id="nameGroup">
+                    <label for="formName">Ваше имя</label>
+                    <input type="text" id="formName" placeholder="Введите имя">
+                    <div class="error-message">Имя должно содержать не менее 2 символов</div>
+                </div>
+                <div class="form-group" id="emailGroup">
+                    <label for="formEmail">E-mail</label>
+                    <input type="email" id="formEmail" placeholder="example@mail.com">
+                    <div class="error-message">Введите корректный адрес электронной почты</div>
+                </div>
+                <div class="form-group" id="messageGroup">
+                    <label for="formMessage">Ваше сообщение</label>
+                    <textarea id="formMessage" placeholder="Напишите ваш отзыв или вопрос..."></textarea>
+                    <div class="error-message">Сообщение не должно быть пустым (минимум 10 символов)</div>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Мир Блинов. Разработано с любовью к кулинарии.</p>
+    </footer>
+
+    <!-- Подключение внешнего JavaScript сценария -->
+    <script src="script.js"></script>
+</body>
+</html>
